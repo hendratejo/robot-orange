@@ -14,7 +14,7 @@ class TestLoginRegister(unittest.TestCase):
         
     def test_Login_Negatif(self): 
         driver = self.driver
-        driver.get("https://http://myappventure.herokuapp.com/registration") # buka situs
+        driver.get("https://http://myappventure.herokuapp.com/login") # buka situs
         driver.maximize_window()
         time.sleep(3)
         driver.find_element(By.ID,"txtUsername").send_keys("Salah") # isi email
@@ -28,12 +28,12 @@ class TestLoginRegister(unittest.TestCase):
 
     def test_Login_Positif(self): 
         driver = self.driver
-        driver.get("https://opensource-demo.orangehrmlive.com") # buka situs
+        driver.get("https://myappventure.herokuapp.com.com") # buka situs
         driver.maximize_window()
         time.sleep(3)
-        driver.find_element(By.ID,"txtUsername").send_keys("Admin") # isi email
+        driver.find_element(By.ID,"txtUsername").send_keys("tejohimtek@gmail.com") # isi email
         time.sleep(1)
-        driver.find_element(By.ID,"txtPassword").send_keys("admin123") # isi password
+        driver.find_element(By.ID,"txtPassword").send_keys("Arjuna121") # isi password
         time.sleep(1)
         driver.find_element(By.ID,"btnLogin").click()
 
@@ -42,7 +42,7 @@ class TestLoginRegister(unittest.TestCase):
 
     def test_Job(self):
         driver = self.driver
-        driver.get("https://opensource-demo.orangehrmlive.com") # buka situs
+        driver.get("myappventure.herokuapp.com") # buka situs
         driver.maximize_window()
         time.sleep(3)
         driver.find_element(By.ID,"menu_admin_viewAdminModule").click()
